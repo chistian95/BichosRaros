@@ -58,7 +58,7 @@ public class Bicho implements KeyListener {
 		/**
 		 * BICHO PEZ
 		 */
-		/*		
+		/*
 		Nodo cuerpo = new Nodo(this, TipoNodo.ESTATICO, null, 0, 50);
 		Nodo cola1 = new Nodo(this, TipoNodo.MOTOR, cuerpo, 0, 35);
 		Nodo cola2 = new Nodo(this, TipoNodo.MOTOR, cola1, 0, 25);
@@ -72,38 +72,39 @@ public class Bicho implements KeyListener {
 		/**
 		 * BICHO CANGREJO
 		 */
+		
 		Nodo cuerpo = new Nodo(this, TipoNodo.ESTATICO, null, 0, 50);		
 		
 		Nodo pataIzq1_0 = new Nodo(this, TipoNodo.MOTOR, cuerpo, 50, 10);
-		Nodo pataIzq1_1 = new Nodo(this, TipoNodo.MOTOR, pataIzq1_0, 0, 5);
+		Nodo pataIzq1_1 = new Nodo(this, TipoNodo.ESTATICO, pataIzq1_0, 0, 5);
 		Nodo pataIzq1_2 = new Nodo(this, TipoNodo.MOTOR, pataIzq1_1, 0, 5);
-		Nodo pataIzq1_3 = new Nodo(this, TipoNodo.MOTOR, pataIzq1_2, 0, 5);
+		Nodo pataIzq1_3 = new Nodo(this, TipoNodo.ESTATICO, pataIzq1_2, 0, 5);
 		new Nodo(this, TipoNodo.MOTOR, pataIzq1_3, 0, 5); //PataIzq1_4
 		Nodo pataIzq2_0 = new Nodo(this, TipoNodo.MOTOR, cuerpo, 90, 10);
-		Nodo pataIzq2_1 = new Nodo(this, TipoNodo.MOTOR, pataIzq2_0, 0, 5);
+		Nodo pataIzq2_1 = new Nodo(this, TipoNodo.ESTATICO, pataIzq2_0, 0, 5);
 		Nodo pataIzq2_2 = new Nodo(this, TipoNodo.MOTOR, pataIzq2_1, 0, 5);
-		Nodo pataIzq2_3 = new Nodo(this, TipoNodo.MOTOR, pataIzq2_2, 0, 5);
+		Nodo pataIzq2_3 = new Nodo(this, TipoNodo.ESTATICO, pataIzq2_2, 0, 5);
 		new Nodo(this, TipoNodo.MOTOR, pataIzq2_3, 0, 5); //PataIzq2_4
 		Nodo pataIzq3_0 = new Nodo(this, TipoNodo.MOTOR, cuerpo, 130, 10);
-		Nodo pataIzq3_1 = new Nodo(this, TipoNodo.MOTOR, pataIzq3_0, 0, 5);
+		Nodo pataIzq3_1 = new Nodo(this, TipoNodo.ESTATICO, pataIzq3_0, 0, 5);
 		Nodo pataIzq3_2 = new Nodo(this, TipoNodo.MOTOR, pataIzq3_1, 0, 5);
-		Nodo pataIzq3_3 = new Nodo(this, TipoNodo.MOTOR, pataIzq3_2, 0, 5);
+		Nodo pataIzq3_3 = new Nodo(this, TipoNodo.ESTATICO, pataIzq3_2, 0, 5);
 		new Nodo(this, TipoNodo.MOTOR, pataIzq3_3, 0, 5); //PataIzq3_4
 		
 		Nodo pataDrc1_0 = new Nodo(this, TipoNodo.MOTOR, cuerpo, -50, 10);
-		Nodo pataDrc1_1 = new Nodo(this, TipoNodo.MOTOR, pataDrc1_0, 0, 5);
+		Nodo pataDrc1_1 = new Nodo(this, TipoNodo.ESTATICO, pataDrc1_0, 0, 5);
 		Nodo pataDrc1_2 = new Nodo(this, TipoNodo.MOTOR, pataDrc1_1, 0, 5);
-		Nodo pataDrc1_3 = new Nodo(this, TipoNodo.MOTOR, pataDrc1_2, 0, 5);
+		Nodo pataDrc1_3 = new Nodo(this, TipoNodo.ESTATICO, pataDrc1_2, 0, 5);
 		new Nodo(this, TipoNodo.MOTOR, pataDrc1_3, 0, 5); //pataDrc1_4
 		Nodo pataDrc2_0 = new Nodo(this, TipoNodo.MOTOR, cuerpo, -90, 10);
-		Nodo pataDrc2_1 = new Nodo(this, TipoNodo.MOTOR, pataDrc2_0, 0, 5);
+		Nodo pataDrc2_1 = new Nodo(this, TipoNodo.ESTATICO, pataDrc2_0, 0, 5);
 		Nodo pataDrc2_2 = new Nodo(this, TipoNodo.MOTOR, pataDrc2_1, 0, 5);
-		Nodo pataDrc2_3 = new Nodo(this, TipoNodo.MOTOR, pataDrc2_2, 0, 5);
+		Nodo pataDrc2_3 = new Nodo(this, TipoNodo.ESTATICO, pataDrc2_2, 0, 5);
 		new Nodo(this, TipoNodo.MOTOR, pataDrc2_3, 0, 5); //pataDrc2_4
 		Nodo pataDrc3_0 = new Nodo(this, TipoNodo.MOTOR, cuerpo, -130, 10);
-		Nodo pataDrc3_1 = new Nodo(this, TipoNodo.MOTOR, pataDrc3_0, 0, 5);
+		Nodo pataDrc3_1 = new Nodo(this, TipoNodo.ESTATICO, pataDrc3_0, 0, 5);
 		Nodo pataDrc3_2 = new Nodo(this, TipoNodo.MOTOR, pataDrc3_1, 0, 5);
-		Nodo pataDrc3_3 = new Nodo(this, TipoNodo.MOTOR, pataDrc3_2, 0, 5);
+		Nodo pataDrc3_3 = new Nodo(this, TipoNodo.ESTATICO, pataDrc3_2, 0, 5);
 		new Nodo(this, TipoNodo.MOTOR, pataDrc3_3, 0, 5); //pataDrc3_4
 		
 		Nodo cabeza = new Nodo(this, TipoNodo.ESTATICO, cuerpo, 180, 35);
