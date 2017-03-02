@@ -36,18 +36,16 @@ public class Bicho implements KeyListener {
 					y += Math.sin(anguloRad) * 2;
 				}
 				
-				if(arriba || abajo) {
-					double angulo = nodoCentral.getAnguloActual();
-					if(izquierda) {					
-						angulo = angulo - velocidadGiro < 0 ? 360 : angulo - velocidadGiro;
-					}
-					if(derecha) {
-						angulo = angulo + velocidadGiro > 360 ? 0 : angulo + velocidadGiro;
-					}
-					nodoCentral.setAnguloActual(angulo);
-					
-					nodoCentral.mover();					
+				double angulo = nodoCentral.getAnguloActual();
+				if(izquierda) {					
+					angulo = angulo - velocidadGiro < 0 ? 360 : angulo - velocidadGiro;
 				}
+				if(derecha) {
+					angulo = angulo + velocidadGiro > 360 ? 0 : angulo + velocidadGiro;
+				}
+				nodoCentral.setAnguloActual(angulo);
+				
+				nodoCentral.mover();	
 			}
 		};
 	}
@@ -128,6 +126,12 @@ public class Bicho implements KeyListener {
 			break;
 		case KeyEvent.VK_D:
 			derecha = true;
+			break;
+		case KeyEvent.VK_SPACE:
+			evolucionar();
+			break;
+		case KeyEvent.VK_CONTROL:
+			reiniciarNodos();
 			break;
 		}
 	}
