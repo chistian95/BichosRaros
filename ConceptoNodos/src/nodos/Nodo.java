@@ -1,4 +1,4 @@
-package nodos2;
+package nodos;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -14,6 +14,7 @@ public class Nodo {
 	private double anguloGiro;
 	private double anguloTope;
 	private boolean anguloBajar;
+	private boolean visible;
 	private TipoNodo tipoNodo;
 	private Nodo nodoPadre;
 	private Bicho bicho;
@@ -31,6 +32,14 @@ public class Nodo {
 		if(nodoPadre != null) {
 			nodoPadre.nodos.add(this);
 		}
+		visible = false;
+		try {
+			double tiempo = Math.random() * 40 + 10;
+			Thread.sleep((long) tiempo);
+			visible = true;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void mover() {
@@ -41,6 +50,12 @@ public class Nodo {
 			} else {
 				anguloGiro = anguloGiro + bicho.getVelocidadGiro() >= anguloTope ? anguloTope : anguloGiro + bicho.getVelocidadGiro();
 				anguloBajar = anguloGiro >= anguloTope;
+			}
+		} else if(tipoNodo == TipoNodo.FLEXIBLE) {
+			if(nodoPadre.anguloBajar) {
+				anguloGiro = nodoPadre.anguloGiro - bicho.getVelocidadGiro();
+			} else {
+				anguloGiro = nodoPadre.anguloGiro + bicho.getVelocidadGiro();
 			}
 		}
 		
@@ -62,6 +77,9 @@ public class Nodo {
 	}
 	
 	public void pintar(Graphics2D g) {
+		if(!visible) {
+			return;
+		}
 		int xAbs = (int) Math.round(x - radio);
 		int yAbs = (int) Math.round(y - radio);	
 		int radioAbs = (int) Math.round(radio * 2.0);

@@ -1,4 +1,4 @@
-package nodos2;
+package nodos;
 
 import java.awt.Color;
 import java.awt.FontMetrics;

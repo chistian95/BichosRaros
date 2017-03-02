@@ -1,4 +1,4 @@
-package nodos2;
+package nodos;
 
 public class Lanzador {
 	private Bicho bicho;

@@ -1,4 +1,4 @@
-package nodos2;
+package nodos;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -31,6 +31,12 @@ public class Pantalla extends JFrame implements KeyListener {
 			@Override
 			public void onClick() {
 				lanzador.getBicho().reiniciarNodos();
+			}
+		});
+		botones.add(new Boton(this, 600, 650, 100, 50, "SIGUIENTE") {
+			@Override
+			public void onClick() {
+				lanzador.getBicho().evolucionar();
 			}
 		});
 	}

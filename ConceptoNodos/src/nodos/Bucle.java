@@ -1,4 +1,4 @@
-package nodos2;
+package nodos;
 
 public abstract class Bucle extends Thread {
 	private long tiempo;
